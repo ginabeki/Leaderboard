@@ -1,12 +1,9 @@
-const scoreWrap = document.querySelector('.score-list');
-const scoreItem = ['One', 'Two', 'Three'];
+import { btnRefresh, scoresList } from './addScore.js';
 
-const refreshScores = () => {
-  scoreItem.map((item) => {
-    const scoreItem = document.createElement('li');
-    scoreItem.innerHTML = item;
-    scoreWrap.appendChild(scoreItem);
-    return '';
+const refreshScore = () => {
+  btnRefresh.addEventListener('click', () => {
+    scoresList.innerHTML = '';
   });
 };
-export default refreshScores;
+
+export default refreshScore;

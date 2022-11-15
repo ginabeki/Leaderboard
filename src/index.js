@@ -1,10 +1,12 @@
 import './style.css';
-import refreshScores from './modules/refreshScore.js';
-import addScore from './modules/addScore.js';
+import { scoreAndName } from './modules/addScore.js';
+import refreshScore from './modules/refreshScore.js';
 
-const score = document.getElementById('score');
-const mainContent = document.getElementById('scores-wrap');
+const form = document.querySelector('.form');
 
-addScore(mainContent);
-refreshScores(mainContent);
-export default { score };
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  scoreAndName();
+});
+refreshScore();
