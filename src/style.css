@@ -8,20 +8,45 @@
 
 body {
   margin: 0 auto;
-  padding: 10rem;
+  padding: 3rem 3rem 0 3rem;
   font-family: 'Poppins', sans-serif;
   height: 100vh;
+  width: 100%;
+  background: url(./bg.jpg) center no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(1px);
+}
+
+h1 {
+  color: #16001e;
+  text-align: center;
+}
+
+h2 {
+  color: #16001e;
 }
 
 ul {
   list-style: none;
-  border: 2px solid black;
+  border: 2px solid #0eb1d2;
+  overflow-y: scroll;
+  max-height: 20rem;
+}
+
+.body-wrap {
+  padding: 1rem;
+  background-color: #fffffc;
+  border-radius: 4px;
+  opacity: 0.8;
+  margin-bottom: 40px;
+  max-height: 95%;
 }
 
 #scores-wrap {
   display: flex;
   justify-content: space-around;
   margin-top: 3rem;
+  width: 100%;
 }
 
 .recent-inline {
@@ -34,14 +59,24 @@ ul {
   padding: 1rem;
 }
 
+.list-item {
+  background: transparent;
+}
+
+.list-item:nth-child(odd) {
+  background: #0eb1d2;
+  color: #fff;
+}
+
 .btn {
   font-size: 1.1rem;
-  color: black;
+  color: #16001e;
+  font-weight: 400;
   background-color: transparent;
   padding: 3px 7px;
-  border: 2px solid black;
-  box-shadow: 3px 3px 0 0 black;
-  font-weight: 200;
+  border: 2px solid #0eb1d2;
+  box-shadow: 3px 3px 0 0 #0eb1d2;
+  cursor: pointer;
 }
 
 .add-score {
@@ -58,7 +93,7 @@ input[type='text'],
 input[type='number'] {
   margin-top: 1rem;
   padding: 0.3rem;
-  border: 2px solid black;
+  border: 2px solid #0eb1d2;
 }
 
 .btn.submit {
@@ -67,9 +102,42 @@ input[type='number'] {
   align-self: flex-end;
 }
 
+footer {
+  background-color: #fffffc;
+  padding: 1rem;
+  text-align: center;
+  color: #16001e;
+  font-weight: 400;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  color: #16001e;
+  font-weight: 400;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 800px) {
+  body {
+    height: 115vh;
+  }
+
   #scores-wrap {
     flex-direction: column;
     gap: 2rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
   }
 }
