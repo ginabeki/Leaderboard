@@ -1,6 +1,14 @@
 # Leaderboard
 > JavaScript project for the Leaderboard list app, using webpack and ES6 features, notably modules.
+
 ![](https://img.shields.io/badge/Microverse-blueviolet)
+
+## Preview
+### Desktop display
+[![desktop.png](https://i.postimg.cc/135qWrMy/desktop.png)](https://postimg.cc/dLp33dzf)
+
+### Mobile display
+[![mobile.png](https://i.postimg.cc/rskhJTby/mobile.png)](https://postimg.cc/2b0Fksrg)
 
 ## Built With
 
