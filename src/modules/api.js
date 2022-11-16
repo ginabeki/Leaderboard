@@ -23,14 +23,14 @@ export default class Api {
     return response.json();
   }
 
-  render = (data) => {
+  display = (data) => {
     const li = document.createElement('li');
     li.innerHTML = `${data.user} : ${data.score}`;
     li.className = 'list-item';
     this.wrapper.appendChild(li);
   };
 
-  renderAll = (arr) => {
+  displayAll = (arr) => {
     this.wrapper.innerHTML = '';
     const div = document.createElement('div');
     arr.forEach((data) => {
