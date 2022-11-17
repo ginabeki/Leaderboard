@@ -7,8 +7,6 @@
 }
 
 body {
-  margin: 0 auto;
-  padding: 3rem 3rem 0 3rem;
   font-family: 'Poppins', sans-serif;
   height: 100vh;
   width: 100%;
@@ -29,24 +27,32 @@ h2 {
 ul {
   list-style: none;
   border: 2px solid #0eb1d2;
-  overflow-y: scroll;
-  max-height: 20rem;
 }
 
 .body-wrap {
-  padding: 1rem;
+  padding: 2rem;
   background-color: #fffffc;
   border-radius: 4px;
   opacity: 0.8;
-  margin-bottom: 40px;
-  max-height: 95%;
+  margin: 0.5rem auto;
+  max-height: 92%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  gap: 1rem;
 }
 
 #scores-wrap {
   display: flex;
-  justify-content: space-around;
-  margin-top: 3rem;
+  justify-content: center;
+  gap: 1rem;
   width: 100%;
+}
+
+.recent-scores {
+  min-width: 40%;
+  padding: 0.4rem;
 }
 
 .recent-inline {
@@ -57,6 +63,8 @@ ul {
 .score-list {
   margin-top: 2rem;
   padding: 1rem;
+  overflow-y: scroll;
+  max-height: 20rem;
 }
 
 .list-item {
@@ -82,6 +90,8 @@ ul {
 .add-score {
   display: flex;
   flex-direction: column;
+  min-width: 30%;
+  padding: 0.4rem;
 }
 
 .form {
@@ -104,7 +114,7 @@ input[type='number'] {
 
 footer {
   background-color: #fffffc;
-  padding: 1rem;
+  height: 5%;
   text-align: center;
   color: #16001e;
   font-weight: 400;
