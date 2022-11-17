@@ -1,8 +1,8 @@
 export default class Api {
-  constructor(wrapper) {
+  constructor(container) {
     this.id = 'YXOldI6lhVGDO0ByqNvt';
     this.url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${this.id}/scores`;
-    this.wrapper = wrapper;
+    this.container = container;
   }
 
   async sendData(data) {
@@ -27,11 +27,11 @@ export default class Api {
     const li = document.createElement('li');
     li.innerHTML = `${data.user} : ${data.score}`;
     li.className = 'list-item';
-    this.wrapper.appendChild(li);
+    this.container.appendChild(li);
   };
 
   displayAll = (arr) => {
-    this.wrapper.innerHTML = '';
+    this.container.innerHTML = '';
     const div = document.createElement('div');
     arr.forEach((data) => {
       const li = document.createElement('li');
@@ -39,6 +39,6 @@ export default class Api {
       li.className = 'list-item';
       div.appendChild(li);
     });
-    this.wrapper.appendChild(div);
+    this.container.appendChild(div);
   };
 }
