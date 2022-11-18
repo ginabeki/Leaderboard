@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-- Link (here)[https://ginabeki.github.io/Leaderboard/]
+- Link [here](https://ginabeki.github.io/Leaderboard/)
 
 ## Getting Started
 
