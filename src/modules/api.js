@@ -1,6 +1,6 @@
 export default class Api {
   constructor(container) {
-    this.id = 'YXOldI6lhVGDO0ByqNvt';
+    this.id = process.env.API_KEY;
     this.url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${this.id}/scores`;
     this.container = container;
   }

@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   plugins: [
@@ -10,6 +11,7 @@ module.exports = {
       template: path.resolve(__dirname, './src/index.html'), // template file
       filename: 'index.html', // output file
     }),
+    new Dotenv(),
   ],
   entry: './src/index.js',
   output: {
